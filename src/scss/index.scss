@@ -8,6 +8,7 @@ $recommendationsBgColor: #ff605f;
 $contactBgColor: #f6f6f6;
 $locationBgColor: #4fc1e9;
 $footerBgColor: #363842;
+
 body
 {
     padding: 0;
@@ -17,14 +18,17 @@ body
         background-color: $homeBgColor; 
         nav
         {
+            background-color: $homeBgColor; 
+            
             display: flex;
             position: fixed;
-            height: 50px;
+            align-items: center;
+            height: 80px;
             width: 100%;
-            margin-top: 10px;
 
             div
             {
+                
                 height: 50px;
                 line-height: 50px;
                 width: 50%;
@@ -63,12 +67,31 @@ body
                 }
             }
         }
+        section
+        {
+            height: 450px;
+            color: white;
+            div
+            {   
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                div
+                {
+                    height: 80%;
+                }
+                button
+                {
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 40px;
+                }
+            }
+        }
     }
-    div
-    {
-        height: 450px;
-        
-    }
+
 }
 #profession
 {
