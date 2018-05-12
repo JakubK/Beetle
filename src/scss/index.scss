@@ -97,6 +97,24 @@ body
 {
     height: 300px;
     background-color: $proffesionBgColor;
+    div
+    {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        .content-part
+        {
+            align-items: flex-start;
+            width: 55%;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .img-part
+        {
+            width: 45%;
+        }
+    }
 }
 #portfolio
 {
