@@ -1,5 +1,13 @@
 $homeBgColor: #5ec2e7;
 $navbarBtnHover: #54aecf;
+$proffesionBgColor: #f4f4f4;
+$portfolioBgColor: #fbfbfb;
+$skillsBgColor: #f5f5f5;
+$experienceBgColor: #fbfbfb;
+$recommendationsBgColor: #ff605f;
+$contactBgColor: #f6f6f6;
+$locationBgColor: #4fc1e9;
+$footerBgColor: #363842;
 body
 {
     padding: 0;
@@ -61,4 +69,44 @@ body
         height: 450px;
         
     }
+}
+#profession
+{
+    height: 300px;
+    background-color: $proffesionBgColor;
+}
+#portfolio
+{
+    height: 600px;
+    background-color: $portfolioBgColor;
+}
+#skills
+{
+    height: 500px;
+    background-color: $skillsBgColor;
+}
+#experience
+{
+    height: 600px;
+    background-color: $experienceBgColor;
+}
+#recommendations
+{
+    height: 200px;
+    background-color: $recommendationsBgColor;
+}
+#contact
+{
+    height: 500px;
+    background-color: $contactBgColor;
+}
+#location
+{
+    height: 250px;
+    background-color: $locationBgColor;
+}
+footer
+{
+    height: 150px;
+    background-color: $footerBgColor;
 }
