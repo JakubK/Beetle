@@ -105,14 +105,18 @@ body
         height: 100%;
         .content-part
         {
-            align-items: flex-start;
+            display: block;
             width: 55%;
-            flex-direction: column;
-            justify-content: center;
+            margin-top: 100px;
         }
         .img-part
         {
+            display: block;
             width: 45%;
+            div
+            {
+                background: url('http://placehold.it/350x200') no-repeat center center;
+            }
         }
     }
 }
