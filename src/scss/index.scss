@@ -15,7 +15,7 @@ body
     margin: 0;
     header
     {
-        background-color: $homeBgColor; 
+        background-color: $homeBgColor;
         nav
         {
             background-color: $homeBgColor; 
@@ -135,10 +135,36 @@ body
     height: 600px;
     background-color: $experienceBgColor;
 }
-#recommendations
-{
-    height: 200px;
+#recommendations {
+    height: 350px;
     background-color: $recommendationsBgColor;
+    overflow: hidden;
+    color: lightgray;
+
+    text-align: center;
+
+    div:first-of-type {
+        display: table;
+        margin-top: 20px;
+        font-size: 16px;
+        height: 200px;
+        width: 100%;
+
+        div {
+            display: table-cell;
+            vertical-align: middle;
+
+            blockquote {
+                color: white;
+                font-size: 26px;
+            }
+        }
+    }
+
+    .dot-container {
+        width: 100%;
+        display: block;
+    }
 }
 #contact
 {
@@ -172,4 +198,17 @@ footer
             }
         }
     }
+}
+
+.dot
+{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgba(white,0.4);
+    display: inline-block;
+}
+
+.dot:active, .dot:hover {
+    background-color: white;
 }
