@@ -2,7 +2,14 @@ $homeBgColor: #5ec2e7;
 $navbarBtnHover: #54aecf;
 $proffesionBgColor: #f4f4f4;
 $portfolioBgColor: #fbfbfb;
+
 $skillsBgColor: #f5f5f5;
+$skillsFirstCircleColor: #35afba;
+$skillsSecondCircleColor: #34cf75;
+$skillsThirdCircleColor: #28ae61;
+$skillsFourthCircleColor: #5ea8d9;
+
+
 $experienceBgColor: #fbfbfb;
 $recommendationsBgColor: #ff605f;
 $contactBgColor: #f6f6f6;
@@ -125,10 +132,58 @@ body
     height: 600px;
     background-color: $portfolioBgColor;
 }
-#skills
-{
+#skills {
+    overflow: hidden;
     height: 500px;
     background-color: $skillsBgColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+        margin-top: 40px;
+    }
+
+    > div {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        svg {
+            transform: rotate(-90deg);
+            -o-transform: rotate(-90deg);
+            -webkit-transform: rotate(-90deg);
+        }
+
+        circle {
+            fill: none;
+        }
+
+        :nth-child(1) {
+            circle {
+                stroke: $skillsFirstCircleColor;
+            }
+        }
+
+        :nth-child(2) {
+            circle {
+                stroke: $skillsSecondCircleColor;
+            }
+        }
+
+        :nth-child(3) {
+            circle {
+                stroke: $skillsThirdCircleColor;
+            }
+        }
+
+        :nth-child(4) {
+            circle {
+                stroke: $skillsFourthCircleColor;
+            }
+        }
+    }
 }
 #experience
 {
