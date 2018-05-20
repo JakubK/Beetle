@@ -9,6 +9,8 @@ $skillsSecondCircleColor: #34cf75;
 $skillsThirdCircleColor: #28ae61;
 $skillsFourthCircleColor: #5ea8d9;
 
+$skillsPercentColor: #666666;
+$skillsSkillColor: #b0b0b0;
 
 $experienceBgColor: #fbfbfb;
 $recommendationsBgColor: #ff605f;
@@ -16,6 +18,7 @@ $contactBgColor: #f6f6f6;
 $locationBgColor: #4fc1e9;
 $footerBgColor: #363842;
 $footerLinkColor: #545766;
+
 body {
     padding: 0;
     margin: 0;
@@ -123,6 +126,8 @@ body {
 {
     height: 600px;
     background-color: $portfolioBgColor;
+
+
 }
 #skills {
     overflow: hidden;
@@ -142,10 +147,17 @@ body {
         flex-direction: row;
         justify-content: space-between;
 
+        > div {
+            position: relative;
+        }
+
+
         svg {
             transform: rotate(-90deg);
             -o-transform: rotate(-90deg);
             -webkit-transform: rotate(-90deg);
+            width: 100%;
+            height: 100%;
         }
 
         circle {
@@ -278,4 +290,22 @@ footer {
 
 .dot:active, .dot:hover {
     background-color: white;
+}
+
+.progress-content
+{
+    text-align:center;
+    position: absolute;
+    width: 100%;
+    top:40%;
+    left:0;
+
+    color:$skillsSkillColor;
+    font-size: 14px;
+
+    strong
+    {
+        font-size: 40px;
+        color: $skillsPercentColor;
+    }
 }
