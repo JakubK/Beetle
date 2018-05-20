@@ -16,81 +16,74 @@ $contactBgColor: #f6f6f6;
 $locationBgColor: #4fc1e9;
 $footerBgColor: #363842;
 $footerLinkColor: #545766;
-body
-{
+body {
     padding: 0;
     margin: 0;
-    header
-    {
+
+    header {
         background-color: $homeBgColor;
-        nav
-        {
-            background-color: $homeBgColor; 
-            
+
+        nav {
+            background-color: $homeBgColor;
+            z-index: 1;
             display: flex;
             position: fixed;
             align-items: center;
             height: 80px;
             width: 100%;
 
-            div
-            {
-                
+            div {
                 height: 50px;
                 line-height: 50px;
                 width: 50%;
-                a
-                {
+
+                a {
                     margin-left: 20%;
-                    color:white;      
-                    text-decoration: none;     
-                }                  
+                    color: white;
+                    text-decoration: none;
+                }
             }
-            ul
-            {
+
+            ul {
                 width: 60%;
                 float: right;
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
-                li
-                {
+
+                li {
                     border-radius: 5px;
-
-                    color:white;      
-                    text-decoration: none;      
+                    color: white;
+                    text-decoration: none;
                     text-align: center;
-
                     float: left;
                     display: block;
-
                     padding: 10px 20px;
 
-                    &:hover
-                    {
+                    &:hover {
                         background-color: $navbarBtnHover;
                     }
                 }
             }
         }
-        section
-        {
+
+        section {
             height: 450px;
             color: white;
-            div
-            {   
+
+            div {
                 height: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                div
-                {
+
+                div {
                     height: 80%;
                 }
-                button
-                {
+
+                button {
                     height: 40px;
                     width: 40px;
                     border-radius: 40px;
@@ -98,7 +91,6 @@ body
             }
         }
     }
-
 }
 #profession
 {
