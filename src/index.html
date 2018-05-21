@@ -14,11 +14,11 @@
                 <a href="#">Beetle</a>
             </div>
             <ul>
-                <li>Home</li>
-                <li>Portfolio</li>
-                <li>Blog</li>
-                <li>Resume</li>
-                <li>Contact</li>
+                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a href="#portfolio">Portfolio</a></li>
+                <li class="active"><a href="#blog">Blog</a></li>
+                <li class="active"><a href="#resume">Resume</a></li>
+                <li class="active"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <section>
@@ -47,24 +47,29 @@ with interaction design background</p>
         </div>
     </section>
     <section id="portfolio">
-        <h2>Portfolio</h2>
+        <h2 class="underline">Portfolio</h2>
         <div class="grid">
             <div class="main">
-                1
+                <div>
+                    <i>Search</i>
+                    <br/>
+                    <b>Hover Effect</b>
+                    <p>Lorem ipsum </p>
+                </div>
             </div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
+            <div class="portfolio-placeholder"></div>
+            <div class="portfolio-placeholder"></div>
+            <div class="portfolio-placeholder"></div>
+            <div class="portfolio-placeholder"></div>
+            <div class="portfolio-placeholder"></div>
+            <div class="portfolio-placeholder"></div>
+            <div class="portfolio-placeholder"></div>
+            <div class="portfolio-placeholder"></div>
         </div>
         <button type="button">Browse Portfolio</button>
     </section>
     <section id="skills">
-        <h3>Skills</h3>
+        <h3 class="underline">Skills</h3>
         <p>
             I’m an experienced and passionate user interface designer with interaction design background. My goal is to
             <br/> make the world wide web a better place by designing beautiful user experiences, one site at a time.
@@ -193,7 +198,56 @@ with interaction design background</p>
         </div>
     </section>
     <section id="contact">
+        <div>
+            <h3 class="underline">Contact</h3>
+        </div>
+        <div class="contact-container">
+            <div class="form">
+                <div>
+                    <input class="input-name" type="text"/>
+                    <input class="input-email" type="text"/>
+                </div>
+                <input class="input-budget" type="text"/>
+                <input class="input-timeline" type="text"/>
+                <textarea class="input-info">
 
+                </textarea>
+                <br/>
+                <button class="form-submit" type="button">Send</button>
+            </div>
+            <div class="media">
+                <label>Location</label>
+                <p>13, 2 Elizabeth ST,<br/>
+                Melbourne, Victoria 2000, <br/>
+                Australia</p>
+
+                <div class="media-icons">
+                    <label>I am social</label>
+                    <div>
+                        <div>
+                            <img src="http://placehold.it/64x64"/>
+                            <label>Facebook</label>
+                        </div>
+                        <div>
+                            <img src="http://placehold.it/64x64"/>
+                            <label>Twitter</label>
+                        </div>
+                        <div>
+                            <img src="http://placehold.it/64x64"/>
+                            <label>LinkedIn</label>
+                        </div>
+                        <div>
+                            <img src="http://placehold.it/64x64"/>
+                            <label>Google +</label>
+                        </div>
+                        <div>
+                            <img src="http://placehold.it/64x64"/>
+                            <label>RSS</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <section id="location">
 
@@ -204,23 +258,23 @@ with interaction design background</p>
                 <div>
                     <label>Menu</label>
                     <ul>
-                        <li>Home</li>
-                        <li>Portfolio</li>
-                        <li>Blog</li>
-                        <li>Resume</li>
-                        <li>Contact</li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Resume</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
                 <div>
                     <label>Contact</label>
-                    <ul><li>Flat 3D Mockup Kit</li></ul>
+                    <ul><li><a href="#">Flat 3D Mockup Kit</a></li></ul>
                 </div>
                 <div>
                     <label>Newsletter</label>
                 </div>
                 <div>
                     <label>Follow us</label>
-                    <div>
+                    <div class="follow">
                         <span></span>
                         <span></span>
                     </div>
