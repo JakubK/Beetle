@@ -22,6 +22,8 @@ $locationBgColor: #4fc1e9;
 $footerBgColor: #363842;
 $footerLinkColor: #545766;
 
+$underlineColor: lightgray;
+
 body {
     padding: 0;
     margin: 0;
@@ -271,6 +273,11 @@ body {
     {
         margin-top: 50px;
         text-align: center;
+        display: inline-block;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .contact-container
@@ -405,7 +412,6 @@ footer {
                 }
             }
 
-
             ul {
                 margin: 30px 0 0 0;
                 padding: 0;
@@ -506,4 +512,20 @@ footer {
 {
     width: 100%;
     margin-left: -25%;
+}
+
+.underline
+{
+    display: block;
+    &::after
+    {
+        width: 200%;
+        height: 5px;
+        display: block;
+        clear: both;
+        background-color: $underlineColor;
+        content: "";
+        margin-left: -50%;
+        margin-top: 5px;
+    }
 }
