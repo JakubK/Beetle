@@ -68,7 +68,19 @@ body {
                     text-align: center;
                     float: left;
                     display: block;
-                    //padding: 10px 20px;
+                    overflow: hidden;
+                    &.active ::after
+                    {
+                        width: 100%;
+                        height: 5px;
+                        clear: both;
+                        display: block;
+                        background-color: white;
+                        content: "";
+                        margin-top: 5px;
+                        margin-left: 0;
+                        border: 0;
+                    }
                     a
                     {
                         text-decoration: none;
