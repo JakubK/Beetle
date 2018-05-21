@@ -207,10 +207,12 @@ body {
 }
 #experience
 {
-    height: 600px;
+    height: 900px;
     background-color: $experienceBgColor;
     overflow:hidden;
-
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 #recommendations {
     height: 350px;
@@ -352,5 +354,54 @@ footer {
         height: 100%;
         text-align: center;
         align-self: center;
+    }
+}
+
+.experience-desc
+{
+    margin-top:300px;
+    width:45%;
+
+    div
+    {
+        float:right;
+    }
+
+    button
+    {
+        width: 200px;
+        height:50px;
+    }
+}
+
+.experience-story {
+    width: 55%;
+    margin-top: 230px;
+    margin-left: 60px;
+
+    .story-divider {
+        height: 70px;
+    }
+
+    .story-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+
+        > div {
+            width: 100%;
+
+            img {
+                width: 100px;
+                height: 100px;
+                display: inline-block;
+            }
+
+            div {
+                display: inline-block;
+            }
+        }
     }
 }
