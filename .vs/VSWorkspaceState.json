@@ -3,9 +3,10 @@
     "",
     "\\src",
     "\\src\\css",
+    "\\src\\img",
     "\\src\\js",
     "\\src\\scss"
   ],
-  "SelectedNode": "\\src\\scss\\index.scss",
+  "SelectedNode": "\\src\\img\\pixelMap.svg",
   "PreviewInSolutionExplorer": false
 }

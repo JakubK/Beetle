@@ -21,6 +21,7 @@ $experienceTimeLineColor: #cccccc;
 $recommendationsBgColor: #ff605f;
 $contactBgColor: #f6f6f6;
 $locationBgColor: #4fc1e9;
+$locationTextColor: #2b96ad;
 $footerBgColor: #363842;
 $footerLinkColor: #545766;
 
@@ -455,7 +456,6 @@ body {
                         label {
                             display: table-cell;
                             vertical-align: middle;
-                            // margin-left: 10px;
                         }
                     }
                 }
@@ -463,10 +463,31 @@ body {
         }
     }
 }
-#location
-{
-    height: 250px;
+#location {
+    height: 350px;
     background-color: $locationBgColor;
+    background-image: url("../img/pixelMap.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 100%;
+    position: relative;
+    overflow:hidden;
+
+    .message 
+    {
+        text-align: left;
+
+        margin-left: 50%;
+        margin-top: 8%;
+
+        padding: 10px 10px 5px 20px;
+        width: 160px;
+        height: 45px;
+        border-radius: 12px;
+        display: block;
+        color: $locationTextColor;
+        background-color: white;
+    }
 }
 footer {
     height: 200px;

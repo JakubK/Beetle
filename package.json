@@ -22,5 +22,8 @@
     "gulp-autoprefixer": "^5.0.0",
     "gulp-cli": "^2.0.1",
     "gulp-sass": "^4.0.1"
+  },
+  "dependencies": {
+    "gulp-svgmin": "^1.2.4"
   }
 }
