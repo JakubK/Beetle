@@ -16,6 +16,8 @@ $skillsPercentColor: #666666;
 $skillsSkillColor: #b0b0b0;
 
 $experienceBgColor: #fbfbfb;
+$experienceTimeLineColor: #cccccc;
+
 $recommendationsBgColor: #ff605f;
 $contactBgColor: #f6f6f6;
 $locationBgColor: #4fc1e9;
@@ -69,7 +71,7 @@ body {
                     float: left;
                     display: block;
                     overflow: hidden;
-                    &.active ::after
+                    .active ::after
                     {
                         width: 100%;
                         height: 5px;
@@ -90,6 +92,7 @@ body {
                         -moz-user-select: none; /* Firefox */
                         -ms-user-select: none; /* IE10+/Edge */
                         user-select: none; /* Standard */
+
                         cursor: pointer;
                         display: inline-block;
                         width: 100%;
@@ -202,9 +205,10 @@ body {
 
 
         svg {
-            transform: rotate(-90deg);
             -o-transform: rotate(-90deg);
             -webkit-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
             width: 100%;
             height: 100%;
         }
@@ -238,14 +242,91 @@ body {
         }
     }
 }
-#experience
-{
-    height: 900px;
+#experience {
+    height: 800px;
     background-color: $experienceBgColor;
-    overflow:hidden;
+    overflow: hidden;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    .experience-desc {
+        margin-top: 300px;
+        width: 45%;
+
+        div {
+            float: right;
+        }
+
+        button {
+            width: 200px;
+            height: 50px;
+        }
+    }
+
+    .experience-story {
+        width: 55%;
+        margin-top: 150px;
+        margin-left: 60px;
+
+        .story-divider {
+            display:inline-block;
+            height: 20px;
+            vertical-align:middle;
+            text-align: center;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .story-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 0;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 2px;
+                height: 100%;
+                left: 12px;
+                top: 0;
+                background-color: $experienceTimeLineColor;
+            }
+
+            > div {
+                width: 100%;
+                z-index: 1;
+
+                &::before {
+                    vertical-align: top;
+                    margin-top: 15px;
+                    margin-right: 15px;
+                    display: inline-block;
+                    content: "";
+                    height: 100%;
+                    width: 18px;
+                    height: 18px;
+                    background-color: $experienceBgColor;
+                    border-radius: 50%;
+                    border: solid 4px $experienceTimeLineColor;
+                }
+
+                img {
+                    width: 60px;
+                    height: 60px;
+                    vertical-align: top;
+                }
+
+                div {
+                    display: inline-block;
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
 }
 #recommendations {
     height: 350px;
@@ -278,13 +359,12 @@ body {
         display: block;
     }
 }
-#contact
-{
+#contact {
     height: 900px;
     background-color: $contactBgColor;
     overflow: hidden;
-    h3
-    {
+
+    h3 {
         margin-top: 50px;
         text-align: center;
         display: inline-block;
@@ -294,98 +374,88 @@ body {
         transform: translate(-50%, -50%);
     }
 
-    .contact-container
-    {
+    .contact-container {
         display: flex;
         flex-direction: row;
         justify-content: center;
         width: 70%;
         margin: 0 auto;
 
-        .form
-        {
+        .form {
             margin-top: 100px;
             width: 70%;
             margin-right: 100px;
-
             display: flex;
             flex-direction: column;
             align-items: flex-end;
 
-            >div
-            {
+            > div {
                 width: 100%;
-                .input-name, .input-email
-                {
+
+                .input-name, .input-email {
                     width: 49%;
-                    height: 30px;
+                    height: 55px;
                 }
 
-                .input-name
-                {
-                    float:left;
+                .input-name {
+                    float: left;
                     margin-left: -5px;
                 }
 
-                .input-email
-                {
+                .input-email {
                     float: right;
                     margin: 0;
                 }
             }
-            
-            
-            .input-budget
-            {
+
+
+            .input-budget {
                 width: 100%;
-                height: 30px;
+                height: 55px;
                 margin-top: 20px;
             }
 
-            .input-timeline
-            {
+            .input-timeline {
                 width: 100%;
-                height: 30px;
+                height: 55px;
                 margin-top: 20px;
             }
 
-            .input-info
-            {
+            .input-info {
                 width: 100%;
                 height: 100px;
                 margin-top: 20px;
-
                 resize: none;
             }
-            .form-submit
-            {
+
+            .form-submit {
                 margin-top: 40px;
                 width: 200px;
                 height: 50px;
             }
         }
-        .media
-        {
+
+        .media {
             margin-top: 100px;
             width: 30%;
-            .media-icons
-            {
+
+            .media-icons {
                 margin-bottom: 0;
-                >div
-                {
+
+                > div {
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-end;
-                    >div
-                    {
+
+                    > div {
                         display: table;
                         margin-left: -10px;
                         border-spacing: 10px 5px;
-                        label
-                        {
+
+                        label {
                             display: table-cell;
                             vertical-align: middle;
-                            margin-left: 10px;
+                            // margin-left: 10px;
                         }
                     }
                 }
@@ -522,54 +592,7 @@ footer {
     }
 }
 
-.experience-desc
-{
-    margin-top:300px;
-    width:45%;
 
-    div
-    {
-        float:right;
-    }
-
-    button
-    {
-        width: 200px;
-        height:50px;
-    }
-}
-
-.experience-story {
-    width: 55%;
-    margin-top: 230px;
-    margin-left: 60px;
-
-    .story-divider {
-        height: 70px;
-    }
-
-    .story-content {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-
-
-        > div {
-            width: 100%;
-
-            img {
-                width: 100px;
-                height: 100px;
-                display: inline-block;
-            }
-
-            div {
-                display: inline-block;
-            }
-        }
-    }
-}
 .follow
 {
     width: 100%;

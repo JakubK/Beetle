@@ -8,5 +8,5 @@ for (var i = 0; i < circles.length; i++)
     radius = circles[i].r.baseVal.value;
     circumference = radius * 2 * Math.PI;
     circles[i].style.strokeDasharray = circumference;
-    circles[i].style.strokeDashoffset = circumference - percent / 100 * circumference
+    circles[i].style.strokeDashoffset = circumference - percent / 100 * circumference;
 }
