@@ -52,7 +52,6 @@ body {
                     margin-left: 20%;
                     color: white;
                     text-decoration: none;
-
                 }
             }
 
@@ -71,29 +70,33 @@ body {
                     text-align: center;
                     float: left;
                     display: block;
-                    overflow: hidden;
-                    .active ::after
-                    {
-                        width: 100%;
-                        height: 5px;
-                        clear: both;
-                        display: block;
-                        background-color: white;
-                        content: "";
-                        margin-top: 5px;
-                        margin-left: 0;
-                        border: 0;
+                    //overflow: hidden;
+                    position: relative;
+
+                    &.active {
+                        &:hover {
+                            background-color: $homeBgColor;
+                        }
+
+                        &::after {
+                            width: 100%;
+                            height: 5px;
+                            display: block;
+                            clear: both;
+                            background-color: white;
+                            content: "";
+                            left: 0;
+                            bottom: 0;
+                            position: absolute;
+                        }
                     }
-                    a
-                    {
+                    a {
                         text-decoration: none;
                         color: white;
-
-                        -webkit-user-select: none; /* Safari */        
+                        -webkit-user-select: none; /* Safari */
                         -moz-user-select: none; /* Firefox */
                         -ms-user-select: none; /* IE10+/Edge */
                         user-select: none; /* Standard */
-
                         cursor: pointer;
                         display: inline-block;
                         width: 100%;
@@ -271,9 +274,9 @@ body {
         margin-left: 60px;
 
         .story-divider {
-            display:inline-block;
+            display: inline-block;
             height: 20px;
-            vertical-align:middle;
+            vertical-align: middle;
             text-align: center;
             margin-bottom: 10px;
             margin-top: 10px;
@@ -286,6 +289,24 @@ body {
             flex-wrap: wrap;
             position: relative;
             z-index: 0;
+
+
+
+            .story-company {
+                border-radius: 20px;
+                background-color: white;
+            }
+
+            .story-company.facebook {
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-left: 5px;
+                padding-right: 5px;
+                width: 50px;
+                height: 30px;
+
+                background-color: #4b68ad;
+            }
 
             &::before {
                 position: absolute;
@@ -464,22 +485,15 @@ body {
     }
 }
 #location {
+    width: 100%;
     height: 350px;
     background-color: $locationBgColor;
-    background-image: url("../img/pixelMap.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0 100%;
-    position: relative;
     overflow:hidden;
 
-    .message 
-    {
+    .message {
         text-align: left;
-
         margin-left: 50%;
         margin-top: 8%;
-
         padding: 10px 10px 5px 20px;
         width: 160px;
         height: 45px;
@@ -487,6 +501,21 @@ body {
         display: block;
         color: $locationTextColor;
         background-color: white;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-bottom: 10px solid transparent;
+            border-top: 10px solid transparent;
+            border-right: 10px solid white;
+            font-size: 0;
+            line-height: 0;
+            position: absolute;
+            top: 25%;
+            left: -10px;
+        }
     }
 }
 footer {
@@ -612,7 +641,6 @@ footer {
         align-self: center;
     }
 }
-
 
 .follow
 {
