@@ -454,6 +454,15 @@ body {
                 margin-top: 40px;
                 width: 200px;
                 height: 50px;
+
+                background-color: $recommendationsBgColor;
+                color: white;
+                border-radius: 5px;
+                border: none;
+                &:hover
+                {
+                    background-color: red;
+                }
             }
         }
 
@@ -661,5 +670,19 @@ footer {
         content: "";
         margin-left: -50%;
         margin-top: 5px;
+    }
+}
+
+.more-button
+{
+    background-color: transparent;
+    border: 1px solid $portfolioMainProjColor;
+    color: $portfolioMainProjColor;
+    border-radius: 5px;
+    &:hover
+    {
+        background-color: $portfolioMainProjColor;
+        border: 1px solid transparent;
+        color: $portfolioBgColor;
     }
 }
