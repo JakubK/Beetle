@@ -524,6 +524,19 @@ body {
             margin-top: 100px;
             width: 30%;
 
+            img
+            {
+                border-radius: 50%;
+                width: 64px;
+                height: 64px;
+
+                opacity: 0.5;
+                &:hover
+                {
+                    opacity: 1;
+                }
+            }
+
             .media-icons {
                 margin-bottom: 0;
 
@@ -730,7 +743,7 @@ footer {
 .more-button
 {
     background-color: transparent;
-    border: 1px solid $portfolioMainProjColor;
+    border: 3px solid $portfolioMainProjColor;
     color: $portfolioMainProjColor;
     border-radius: 5px;
     padding:0;
