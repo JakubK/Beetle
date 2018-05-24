@@ -132,6 +132,28 @@ body {
                     height: 40px;
                     width: 40px;
                     border-radius: 40px;
+                    padding: 0;
+                    background-color: transparent;
+                    border: 2px solid white;
+
+                    &:hover
+                    {
+                        background-color: white;
+                        .arrow-head
+                        {
+                            border: solid $homeBgColor;
+                            border-width: 0 3px 3px 0;
+                        }
+                    }
+
+                    .arrow-head
+                    {
+                        border: solid white;
+                        border-width: 0 3px 3px 0;
+                        display: inline-block;
+                        padding: 4px;
+                        transform: rotate(45deg);
+                    }
                 }
             }
         }
