@@ -59,3 +59,9 @@ function ScrollToSection(link)
         }
     }
 }
+
+document.querySelector('#arrowButton').addEventListener('click',function(e)
+{
+    e.target.scrollIntoView({block : 'start',behavior : 'smooth'});
+    e.target.scrollTop -= 30;   
+});

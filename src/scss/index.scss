@@ -159,6 +159,15 @@ body {
         }
     }
 }
+
+#introduction
+{
+    background-image: url('../img/svg/headerImg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain;
+}
+
 #profession
 {
     height: 350px;
@@ -706,7 +715,7 @@ footer {
 
     .portfolio-placeholder
     {
-        background-image: url('http://placehold.it/100x100');
+        background-image: url('../img/svg/image.svg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: 80% 80%;
