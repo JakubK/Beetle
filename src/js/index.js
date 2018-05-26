@@ -14,13 +14,12 @@ for (var i = 0; i < circles.length; i++)
 
 var navigationElements = document.querySelectorAll("#navigation > li");
 var j = 0;
+
 navigationElements.forEach(function()
 {
     var d = j;
     navigationElements[d].addEventListener('click',function(e)
     {
-        e.preventDefault(); //prevent default scroll
-        ScrollToSection(navigationElements[d].childNodes[0]);
         MapNavigation(d,navigationElements); //assign 'active' class only to the clicked element
     },false);
     j++;
@@ -35,33 +34,26 @@ function MapNavigation(tIndex, navigationElements)
     navigationElements[tIndex].classList.add('active');
 }
 
-var element;
-
-function ScrollToSection(link)
+var introduction = document.getElementById('introduction');
+document.getElementById("link-introduction").addEventListener('click', function (e)
 {
-    if(link != '')
-    {
-        link = link.getAttribute('href').substring(1);
+    e.preventDefault();
+    introduction.scrollIntoView({ block: 'start', behavior: "smooth" });
+});
 
-        if(link == '')
-        {
-            element = document.getElementsByTagName("header")[0];
-        }
-        else
-        {
-            element = document.getElementById(link);            
-        }
+var portfolio = document.getElementById('portfolio');
+document.getElementById("link-portfolio").addEventListener('click', function (e) {
+    e.preventDefault();
+    portfolio.scrollIntoView({ block: 'start', behavior: "smooth" });
+});
 
-        if(element !== null)
-        {
-            element.scrollIntoView({block : 'start',behavior : 'smooth'});
-            element.scrollTop -= 30;            
-        }
-    }
-}
+var contact = document.getElementById('contact');
+document.getElementById("link-contact").addEventListener('click', function (e) {
+    e.preventDefault();
+    contact.scrollIntoView({ block: 'start', behavior: "smooth" });
+});
 
-document.querySelector('#arrowButton').addEventListener('click',function(e)
-{
-    e.target.scrollIntoView({block : 'start',behavior : 'smooth'});
-    e.target.scrollTop -= 30;   
+var profession = document.getElementById('profession');
+document.getElementById('arrowButton').addEventListener('click', function (e) {
+    profession.scrollIntoView({ block: 'start', behavior: "smooth" });
 });
