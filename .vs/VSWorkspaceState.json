@@ -4,9 +4,10 @@
     "\\src",
     "\\src\\css",
     "\\src\\img",
+    "\\src\\img\\svg",
     "\\src\\js",
     "\\src\\scss"
   ],
-  "SelectedNode": "\\src\\js\\index.js",
+  "SelectedNode": "\\src\\img\\ibm.png",
   "PreviewInSolutionExplorer": false
 }
