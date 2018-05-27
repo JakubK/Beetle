@@ -510,23 +510,21 @@ body {
         margin-left: auto;
         margin-right: auto;
 
-        input, textarea, select
-        {
+        input, textarea, select {
             border: 3px solid lightgray;
             border-radius: 7px;
             font-size: 20px;
             font-weight: bold;
-            &:focus
-            {
+
+            &:focus {
                 border: 3px solid $homeBgColor;
-                &::placeholder
-                {
+
+                &::placeholder {
                     color: black;
                 }
             }
 
-            &::placeholder
-            {
+            &::placeholder {
                 color: darkgray;
             }
         }
@@ -544,7 +542,6 @@ body {
 
                 .input-name, .input-email {
                     height: 55px;
-
                     width: calc(49% - 20px);
                     padding-left: 10px;
                     padding-right: 10px;
@@ -567,7 +564,6 @@ body {
                 padding-left: 10px;
                 padding-right: 10px;
                 height: 55px;
-
                 margin-top: 20px;
             }
 
@@ -598,8 +594,8 @@ body {
                 color: white;
                 border-radius: 5px;
                 border: none;
-                &:hover
-                {
+
+                &:hover {
                     background-color: red;
                 }
             }
@@ -609,15 +605,13 @@ body {
             margin-top: 100px;
             width: 30%;
 
-            img
-            {
+            img {
                 border-radius: 50%;
                 width: 64px;
                 height: 64px;
-
                 opacity: 0.5;
-                &:hover
-                {
+
+                &:hover {
                     opacity: 1;
                 }
             }
@@ -629,15 +623,20 @@ body {
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-end;
+                    align-items: flex-start;
 
                     > div {
-                        display: table;
-                        margin-left: -10px;
-                        border-spacing: 10px 5px;
+                        margin-top: 10px;
+                        width:100%;
+                        display:flex;
+                        flex-direction:row;
+                        align-items:center;
+                        justify-content:flex-start;
 
-                        label {
-                            display: table-cell;
-                            vertical-align: middle;
+                        text-align:left;
+                        label
+                        {
+                            margin-left: 10px;
                         }
                     }
                 }
