@@ -272,7 +272,7 @@ body {
         display: grid;
         width: 60%;
         margin-top: 100px;
-        grid-template-columns: repeat(4,auto);
+        grid-template-columns: 25% 25% 25% 25%;
         grid-template-rows: repeat(3,150px);
     
         grid-column-gap: 20px;
@@ -286,7 +286,7 @@ body {
             grid-row-end: 3;
     
             color: white;
-    
+
             >div
             {
                 margin-top: 100px;
