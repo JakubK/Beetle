@@ -35,10 +35,10 @@ $underlineColor: lightgray;
 //≥768px Medium
 //≥992px Large
 //≥1200px Extralarge
-$extraSmallMax: 575px;
-$smallMax: 767px;
-$mediumMax: 991px;
-$largeMax: 1199px;
+$extraSmallMax: 576px;
+$smallMax: 768px;
+$mediumMax: 992px;
+$largeMax: 1200px;
 
 body {
     padding: 0;
@@ -53,6 +53,7 @@ body {
             display: flex;
             position: fixed;
             align-items: center;
+            width: 100%;
 
             .navigation-brand {
                 height: 50px;
@@ -65,6 +66,19 @@ body {
                     font-family: 'Montserrat-Bold', sans-serif;
                     font-weight: 900;
                     font-size: 20px;
+                }
+
+                #hamburger
+                {
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+
+                    width: 40px;
+                    height: 40px;
+
+                    background-color: #49A4C3;
+                    border: none;
                 }
             }
 
@@ -128,7 +142,6 @@ body {
         {
             nav 
             {
-              width: 100%;
               flex-direction: column;
               height: 235px;
               .navigation-brand
@@ -136,6 +149,10 @@ body {
                   width: 100%;
                   display: inline-block;
                   text-align: center;
+                  #hamburger
+                  {
+                      display: block;
+                  }
                   a
                   {
                       margin-left: 30px;
@@ -155,18 +172,21 @@ body {
               }
             }
         }
-        @media (min-width: $smallMax)
+        @media (min-width: $smallMax +1)
         {
             nav 
             {
-              width: 100%;
               flex-direction: row;
-              height: 80px;
+              height: 60px;
               .navigation-brand
               {
                   width: 40%;
                   display: inline-block;
                   text-align: center;
+                  #hamburger
+                  {
+                    display: none;
+                  }
                   a
                   {
                       text-align: center;

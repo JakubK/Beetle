@@ -34,6 +34,8 @@ function MapNavigation(tIndex, navigationElements)
     navigationElements[tIndex].classList.add('active');
 }
 
+var navbar = document.getElementsByClassName('navbar')[0];
+
 var introduction = document.getElementById('introduction');
 document.getElementById("link-introduction").addEventListener('click', function (e)
 {
@@ -56,4 +58,19 @@ document.getElementById("link-contact").addEventListener('click', function (e) {
 var profession = document.getElementById('profession');
 document.getElementById('arrowButton').addEventListener('click', function (e) {
     profession.scrollIntoView({ block: 'start', behavior: "smooth" });
+});
+
+
+var hamburger = document.getElementById('hamburger');
+hamburger.addEventListener('click',function(e)
+{
+    console.log(navbar.style.height)
+    if(navbar.style.height == "235px" || navbar.style.height == "")
+    {
+        navbar.style.height = "60px";                     
+    }
+    else
+    {
+        navbar.style.height = "235px";           
+    }
 });
