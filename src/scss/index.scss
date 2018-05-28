@@ -30,6 +30,16 @@ $underlineColor: lightgray;
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans');
 
+//<576px Extra Small	
+//≥576px Small
+//≥768px Medium
+//≥992px Large
+//≥1200px Extralarge
+$extraSmallMax: 575px;
+$smallMax: 767px;
+$mediumMax: 991px;
+$largeMax: 1199px;
+
 body {
     padding: 0;
     margin: 0;
@@ -43,17 +53,13 @@ body {
             display: flex;
             position: fixed;
             align-items: center;
-            height: 80px;
-            width: 100%;
 
             .navigation-brand {
                 height: 50px;
                 line-height: 50px;
                 width: 50%;
 
-
                 a {
-                    margin-left: 20%;
                     color: white;
                     text-decoration: none;
                     font-family: 'Montserrat-Bold', sans-serif;
@@ -63,8 +69,6 @@ body {
             }
 
             #navigation {
-                width: 60%;
-                float: right;
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
@@ -74,11 +78,8 @@ body {
                     border-radius: 5px;
                     color: white;
                     text-decoration: none;
-                    text-align: center;
-                    float: left;
-                    display: block;
                     position: relative;
-
+                    
                     &.active {
                         &:hover {
                             background-color: $homeBgColor;
@@ -121,6 +122,66 @@ body {
                         background-color: $navbarBtnHover;
                     }
                 }
+            }
+        }
+        @media (min-width: 0) and (max-width: $smallMax) 
+        {
+            nav 
+            {
+              width: 100%;
+              flex-direction: column;
+              height: 235px;
+              .navigation-brand
+              {
+                  width: 100%;
+                  display: inline-block;
+                  text-align: center;
+                  a
+                  {
+                      margin-left: 30px;
+                  }
+              }
+              #navigation
+              {
+                  width: 100%;
+                  li
+                  {
+                      width: 100%;
+                      a
+                      {
+                        text-align: center;
+                      }
+                  }
+              }
+            }
+        }
+        @media (min-width: $smallMax)
+        {
+            nav 
+            {
+              width: 100%;
+              flex-direction: row;
+              height: 80px;
+              .navigation-brand
+              {
+                  width: 40%;
+                  display: inline-block;
+                  text-align: center;
+                  a
+                  {
+                      text-align: center;
+                      margin-left: 0;
+                  }
+              }
+              #navigation
+              {
+                  width: 60%;
+                  li
+                  {
+                      text-align: center;
+                      float: left;                      
+                  }
+              }
             }
         }
     }
@@ -835,3 +896,6 @@ footer {
         color: $portfolioBgColor;
     }
 }
+
+
+  
