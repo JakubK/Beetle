@@ -93,6 +93,7 @@ body {
                     color: white;
                     text-decoration: none;
                     position: relative;
+                    padding: 10px 20px;
                     
                     &.active {
                         &:hover {
@@ -112,25 +113,18 @@ body {
                         }
                     }
 
-                    a {
-                        text-decoration: none;
-                        color: white;
-                        -webkit-user-select: none; /* Safari */
-                        -moz-user-select: none; /* Firefox */
-                        -ms-user-select: none; /* IE10+/Edge */
-                        user-select: none; /* Standard */
-                        cursor: pointer;
-                        display: inline-block;
-                        width: 100%;
-                        height: 100%;
-                        margin: 0;
-                        padding: 10px 20px;
-                        text-align: left;
-
-                        font-family: 'Montserrat', sans-serif;
-                        font-size: 12px;
-                        font-weight: 400;
-                    }
+                    text-decoration: none;
+                    color: white;
+                    -webkit-user-select: none; /* Safari */
+                    -moz-user-select: none; /* Firefox */
+                    -ms-user-select: none; /* IE10+/Edge */
+                    user-select: none; /* Standard */
+                    cursor: pointer;
+                    outline: none;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 12px;
+                    font-weight: 400;
+                    
 
                     &:hover {
                         background-color: $navbarBtnHover;
@@ -143,7 +137,7 @@ body {
             nav 
             {
               flex-direction: column;
-              height: 235px;
+              height: 255px;
               .navigation-brand
               {
                   width: 100%;
@@ -152,11 +146,8 @@ body {
                   #hamburger
                   {
                       display: block;
-                  }
-                  a
-                  {
-                      margin-left: 30px;
-                  }
+                  }    
+                   margin-left: 30px;
               }
               #navigation
               {
@@ -164,10 +155,7 @@ body {
                   li
                   {
                       width: 100%;
-                      a
-                      {
-                        text-align: center;
-                      }
+                      text-align: center;               
                   }
               }
             }
@@ -187,11 +175,10 @@ body {
                   {
                     display: none;
                   }
-                  a
-                  {
-                      text-align: center;
-                      margin-left: 0;
-                  }
+
+                text-align: center;
+                margin-left: 0;
+                  
               }
               #navigation
               {
@@ -226,17 +213,38 @@ body {
 
         div {
             height: 80%;
+            padding-right: 10px;
+            padding-left: 10px;
             font-family: 'Montserrat';
             >h1
             {
-                font-size: 46px;
-                height: 46px;
                 display:inline-block;
             }
             >label
             {
-                font-size: 16px;
                 margin-top: -10px;
+            }
+            @media (min-width: 0) and (max-width: $smallMax) 
+            {
+                >h1
+                {
+                    font-size: 26px;                                        
+                }
+                >label
+                {
+                    font-size: 16px;                    
+                }
+            }
+            @media (min-width: $smallMax +1)
+            {
+                >h1
+                {
+                    font-size: 46px;                                        
+                }
+                >label
+                {
+                    font-size: 16px;                    
+                }
             }
         }
 

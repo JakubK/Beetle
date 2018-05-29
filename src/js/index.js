@@ -65,12 +65,12 @@ var hamburger = document.getElementById('hamburger');
 hamburger.addEventListener('click',function(e)
 {
     console.log(navbar.style.height)
-    if(navbar.style.height == "235px" || navbar.style.height == "")
+    if(navbar.style.height == "255px" || navbar.style.height == "")
     {
         navbar.style.height = "60px";                     
     }
     else
     {
-        navbar.style.height = "235px";           
+        navbar.style.height = "255px";           
     }
 });
