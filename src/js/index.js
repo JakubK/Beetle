@@ -64,13 +64,21 @@ document.getElementById('arrowButton').addEventListener('click', function (e) {
 var hamburger = document.getElementById('hamburger');
 hamburger.addEventListener('click',function(e)
 {
-    console.log(navbar.style.height)
     if(navbar.style.height == "255px" || navbar.style.height == "")
     {
         navbar.style.height = "60px";                     
     }
     else
     {
-        navbar.style.height = "255px";           
+        navbar.style.height = "255px";
+    }
+});
+
+window.addEventListener('resize',function(e)
+{
+    var display = window.getComputedStyle(hamburger).display;
+    if(display == 'none')
+    {
+        navbar.style.height = "60px";
     }
 });
