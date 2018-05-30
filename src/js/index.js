@@ -1,4 +1,4 @@
-var circles = document.querySelectorAll('#skills > div > div > svg > circle');
+var circles = document.querySelectorAll('.circular-progress');
 var radius;
 var circumference;
 var percent;

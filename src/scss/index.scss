@@ -481,11 +481,16 @@ body {
 }
 #skills {
     overflow: hidden;
-    height: 500px;
+    height: 750px;
     background-color: $skillsBgColor;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (min-width: 0) and (max-width: $smallMax) 
+    {
+        height: 1300px;
+    }
 
     h3 {
         margin-top: 40px;
@@ -496,16 +501,19 @@ body {
     text-align:center;
 
     .skills-container {
-        margin-top: 40px;
+        margin-top: 10px;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        width: 60%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 90%;
         
         .skill {
             position: relative;
             font-size:44px;
             font-weight: 900;
+            width: 250px;
+            height: 250px;
             p
             {
                 color:gray;
@@ -527,6 +535,7 @@ body {
 
         .progress-content
         {
+            margin-top: -20px;
             text-align:center;
             position: absolute;
             width: 100%;
@@ -608,7 +617,6 @@ body {
 
     .experience-story {
         width: 55%;
-        margin-top: 150px;
         margin-left: 60px;
 
         .story-divider {
