@@ -481,20 +481,28 @@ body {
 }
 #skills {
     overflow: hidden;
-    height: 750px;
     background-color: $skillsBgColor;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    @media (min-width: 0) and (max-width: $smallMax) 
+    @media (min-width: 0) and (max-width: $extraSmallMax) 
     {
         height: 1300px;
+    }
+    @media (min-width: $largeMax)
+    {
+        height: 500px;
     }
 
     h3 {
         margin-top: 40px;
         font-family: 'Montserrat';
+    }
+    >p
+    {
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     font-family: 'Open Sans';
@@ -638,8 +646,6 @@ body {
             flex-wrap: wrap;
             position: relative;
             z-index: 0;
-
-
 
             .story-company {
                 border-radius: 20px;
