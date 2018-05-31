@@ -590,16 +590,46 @@ body {
     }
 }
 #experience {
-    height: 800px;
     background-color: $experienceBgColor;
     overflow: hidden;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     font-family: 'Montserrat';
 
+    @media (min-width: 0) and (max-width: $largeMax) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        padding: 20px;
+
+        .experience-story {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            margin-top: 10px;
+            width: 90%;
+
+            .story-content {
+                display: flex;
+                flex-direction: row;
+            }
+        }
+    }
+
+    @media (min-width: $largeMax + 1) {
+        flex-direction: row;
+
+        .experience-story {
+            width: 55%;
+        }
+
+        .experience-desc {
+            margin-top: 300px;
+        }
+    }
+
     .experience-desc {
-        margin-top: 300px;
         width: 45%;
 
         > div {
@@ -616,7 +646,7 @@ body {
         }
 
         button {
-            width: 200px;
+            width: 80%;
             height: 50px;
             font-weight: 600;
             font-family: 'Montserrat';
@@ -624,8 +654,8 @@ body {
     }
 
     .experience-story {
-        width: 55%;
         margin-left: 60px;
+        margin-top: 15px;
 
         .story-divider {
             display: inline-block;
@@ -676,13 +706,11 @@ body {
                 width: 100%;
                 z-index: 1;
 
-                label
-                {
+                label {
                     color: black;
                 }
 
-                p
-                {
+                p {
                     color: gray;
                 }
 
@@ -760,9 +788,10 @@ body {
 }
 #contact {
     font-family: 'Montserrat';
-    height: 900px;
+    height: 1000px;
     background-color: $contactBgColor;
     overflow: hidden;
+    position: relative;
 
     h3 {
         margin-top: 120px;
@@ -774,12 +803,10 @@ body {
         transform: translate(-50%, -50%);
     }
 
-    @media(max-width:$smallMax)
-    {
-      h3
-      {
-          margin-top: 50px;
-      }   
+    @media(max-width:$smallMax) {
+        h3 {
+            margin-top: 50px;
+        }
     }
 
     .contact-container {
@@ -788,41 +815,41 @@ body {
         margin-top: -20px;
         margin-left: auto;
         margin-right: auto;
+        position: relative;
 
-
-        @media(max-width:$smallMax)
-        {
+        @media(max-width:$smallMax) {
             flex-direction: column;
             align-items: center;
-            .form
-            {
+
+            .form {
                 width: 100%;
+
                 .input-name, .input-email {
-                    width: calc(100% - 20px);                    
-                }  
-                .input-email
-                {
+                    width: calc(100% - 20px);
+                }
+
+                .input-email {
                     margin-top: 10px;
                 }
             }
         }
 
-        @media(min-width: $smallMax + 1)
-        {
-            flex-direction: row;   
-            justify-content: center;    
-            .form
-            {
+        @media(min-width: $smallMax + 1) {
+            flex-direction: row;
+            justify-content: center;
+
+            .form {
                 width: 70%;
-                margin-right: 100px;        
+                margin-right: 100px;
+
                 .input-name, .input-email {
-                    width: calc(49% - 20px);                    
-                }        
-                .input-email
-                {
-                    margin: 0;                    
+                    width: calc(49% - 20px);
                 }
-            }                 
+
+                .input-email {
+                    margin: 0;
+                }
+            }
         }
 
         input, textarea, select {
@@ -847,7 +874,6 @@ body {
 
         .form {
             margin-top: 80px;
-            
             display: flex;
             flex-direction: column;
             align-items: flex-end;
@@ -920,12 +946,12 @@ body {
             display: flex;
             flex-direction: column;
 
-            @media(max-width:$smallMax)
-            {
+            @media(max-width:$smallMax) {
                 flex-direction: row;
                 justify-content: flex-start;
                 align-self: flex-start;
-                margin-left: 0;
+                margin-top: 10px;
+                width: 100%;
             }
 
             img {
@@ -937,11 +963,9 @@ body {
             .media-icons {
                 margin-bottom: 0;
 
+
                 > div {
                     display: flex;
-                    flex-direction: column;
-                    justify-content: flex-end;
-                    align-items: flex-start;
 
                     > div {
                         margin-top: 10px;
@@ -962,66 +986,23 @@ body {
                         }
                     }
                 }
-            }
-        }
-    }
-}
-#location {
-    width: 100%;
-    height: 350px;
-    background-color: $locationBgColor;
-    overflow:hidden;
-    position: relative;
 
-    #map
-    {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-
-        background-image: url('../img/map.png');
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-    }
-}
-footer {
-    background-color: $footerBgColor;
-    padding-top: 40px;
-    text-align: center;
-    font-family: 'Montserrat';
-    width: 100%;
-    overflow: hidden;
-
-    > div {
-        display: inline-block;
-        width: 60%;
-
-        > div {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            color: white;
-            text-align: left;
-            height: 100%;
-
-            ul {
-                margin: 30px 0 0 0;
-                padding: 0;
-                list-style-type: none;
-
-                li {
-                    margin: 10px 0;
-                    a
-                    {
-                        text-decoration: none;
-                        color: $footerLinkColor;
-
-                        &:hover
+                @media(max-width:$smallMax) {
+                    > div {
+                        flex-wrap: wrap;
+                       >div
                         {
-                            color: darkgray;
-                        }
+                           flex-direction: column;
+                           width: auto;
+                       }
+                    }
+                }
+
+                @media(min-width: $smallMax + 1) {
+                    > div {
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        align-items: flex-start;
                     }
                 }
             }
@@ -1029,52 +1010,109 @@ footer {
     }
 }
 
-.dot
-{
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: rgba(white,0.4);
-    display: inline-block;
-}
+    #location {
+        width: 100%;
+        height: 350px;
+        background-color: $locationBgColor;
+        overflow: hidden;
+        position: relative;
 
-.dot:active, .dot:hover {
-    background-color: white;
-}
+        #map {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url('../img/map.png');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    }
 
-.follow
-{
-    width: 100%;
-    margin-left: -25%;
-}
+    footer {
+        background-color: $footerBgColor;
+        padding-top: 40px;
+        text-align: center;
+        font-family: 'Montserrat';
+        width: 100%;
+        overflow: hidden;
 
-.underline
-{
-    display: block;
-    &::after
-    {
-        width: 200%;
-        height: 5px;
+        > div {
+            display: inline-block;
+            width: 60%;
+
+            > div {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                color: white;
+                text-align: left;
+                height: 100%;
+
+                ul {
+                    margin: 30px 0 0 0;
+                    padding: 0;
+                    list-style-type: none;
+
+                    li {
+                        margin: 10px 0;
+
+                        a {
+                            text-decoration: none;
+                            color: $footerLinkColor;
+
+                            &:hover {
+                                color: darkgray;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .dot {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: rgba(white,0.4);
+        display: inline-block;
+    }
+
+    .dot:active, .dot:hover {
+        background-color: white;
+    }
+
+    .follow {
+        width: 100%;
+        margin-left: -25%;
+    }
+
+    .underline {
         display: block;
-        clear: both;
-        background-color: $underlineColor;
-        content: "";
-        margin-left: -50%;
-        margin-top: 5px;
-    }
-}
 
-.more-button
-{
-    background-color: transparent;
-    border: 3px solid $portfolioMainProjColor;
-    color: $portfolioMainProjColor;
-    border-radius: 5px;
-    padding:0;
-    &:hover
-    {
-        background-color: $portfolioMainProjColor;
-        border: 1px solid transparent;
-        color: $portfolioBgColor;
+        &::after {
+            width: 200%;
+            height: 5px;
+            display: block;
+            clear: both;
+            background-color: $underlineColor;
+            content: "";
+            margin-left: -50%;
+            margin-top: 5px;
+        }
     }
-}
+
+    .more-button {
+        background-color: transparent;
+        border: 3px solid $portfolioMainProjColor;
+        color: $portfolioMainProjColor;
+        border-radius: 5px;
+        padding: 0;
+
+        &:hover {
+            background-color: $portfolioMainProjColor;
+            border: 1px solid transparent;
+            color: $portfolioBgColor;
+        }
+    }
