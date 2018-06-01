@@ -72,13 +72,28 @@ body {
                 {
                     position: absolute;
                     right: 10px;
-                    top: 10px;
+                    top: 5px;
 
                     width: 40px;
                     height: 40px;
 
-                    background-color: #49A4C3;
+                    background-color: $homeBgColor;
                     border: none;
+                    border-radius: 3px;
+                    
+                    &:hover
+                    {
+                        background-color: #49A4C3;
+                    }
+
+                    .line
+                    {
+                        height: 2px;
+                        background-color: white;
+                        margin-top: 8px;
+                        margin-left: 6px;
+                        margin-right: 6px;
+                    }
                 }
             }
 
@@ -137,7 +152,7 @@ body {
             nav 
             {
               flex-direction: column;
-              height: 255px;
+              height: 240px;
               .navigation-brand
               {
                   width: 100%;
@@ -165,7 +180,7 @@ body {
             nav 
             {
               flex-direction: row;
-              height: 60px;
+              height: 50px;
               .navigation-brand
               {
                   width: 40%;
@@ -596,6 +611,10 @@ body {
     justify-content: space-between;
     font-family: 'Montserrat';
 
+    @media(max-width: $extraSmallMax) {
+        height: 1700px;
+    }
+
     @media (min-width: 0) and (max-width: $largeMax) {
         flex-direction: column;
         align-items: center;
@@ -807,6 +826,7 @@ body {
         h3 {
             margin-top: 50px;
         }
+        height: 1250px;
     }
 
     .contact-container {

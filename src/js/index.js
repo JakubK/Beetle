@@ -66,7 +66,7 @@ hamburger.addEventListener('click',function(e)
 {
     if(navbar.style.height == "255px" || navbar.style.height == "")
     {
-        navbar.style.height = "60px";                     
+        navbar.style.height = "50px";                     
     }
     else
     {
@@ -79,6 +79,6 @@ window.addEventListener('resize',function(e)
     var display = window.getComputedStyle(hamburger).display;
     if(display == 'none')
     {
-        navbar.style.height = "60px";
+        navbar.style.height = "50px";
     }
 });
